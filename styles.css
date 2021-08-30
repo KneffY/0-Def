@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none;
+    cursor: none;
+}
+
+/* STAGE ############################################# */
+#stage {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    border: 1px solid rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#core {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+/* TURRETS ############################################# */
+.turret {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.cyanTurretClass {border: 3px solid rgb(50, 180, 180);}
+.magentaTurretClass {border: 3px solid rgb(180, 50, 180);}
+.yellowTurretClass {border: 3px solid rgb(180, 180, 50);}
+
+.tail {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+}
+.cyanTailClass {border: 3px solid rgb(50, 180, 180);border-top: 0;border-left: 0;}
+.magentaTailClass {border: 3px solid rgb(180, 50, 180);border-top: 0;border-left: 0;}
+.yellowTailClass {border: 3px solid rgb(180, 180, 50);border-top: 0;border-left: 0;}
+
+/* CURSOR ############################################# */
+#cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgb(180, 180, 180);
+    border-radius: 50%;
+    z-index: 4;
+}
+
+/* BULLETS ############################################## */
+.bullet {position: absolute;animation: spinBullet 0.25s infinite linear;}
+@keyframes spinBullet {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/* ENEMY ################################################ */
+.enemy {
+    position: absolute;
+    width: 24px;
+    height: 16px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    /* border: 3px solid rgb(50, 180, 180); <========== */
+}
+.cyanEnemyClass {border: 3px solid rgb(50, 180, 180);}
+.magentaEnemyClass {border: 3px solid rgb(180, 50, 180);}
+.yellowEnemyClass {border: 3px solid rgb(180, 180, 50);}
